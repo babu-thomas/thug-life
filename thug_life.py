@@ -54,9 +54,7 @@ while True:
         cap_width_multiplier = 1.5
 
         cap_width = int(roi_dims[0][2] * cap_width_multiplier)
-        # Maintain aspect ratio
         thug_cap_resized = resize(thug_cap, width=cap_width)
-        thug_cap_resized_gray = cv2.cvtColor(thug_cap_resized, cv2.COLOR_BGR2GRAY)
 
         cap_height = thug_cap_resized.shape[0]
 
